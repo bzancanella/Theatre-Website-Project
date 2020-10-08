@@ -1,0 +1,67 @@
+﻿Introduction
+During the end of my Front End Web Developer bootcamp at the Tech Academy I was involved in a two week Live Project where a team of students worked on a large scale MVC web application. The scale of it was larger than anything I had previously worked on, but it provided a great experience for the type of work I will be doing in the future. We were given lists of specific projects, and I worked on several tasks related to fixing design issues, altering layouts for specific results, and programming additional features. I really enjoyed the entire process, from learning the ins and outs of the IDE, to the constant fine-tuning and troubleshooting of my code. Working as a small team was a good opportunity to get the feel of team software development, and it is something I am looking forward to with a lot of enthusiasm. I am excited for the chance to work on projects of any scale in the future,I felt the process worked well for my strengths while challenging a few of my weaknesses, which lead to an experience that left me hungry for more. 
+
+
+Front-End Stories
+
+
+Button Styling
+This story was to standardize all of the buttons on the main site. The previous buttons were based on a Bootstrap class  and I was tasked with creating a new custom class for the website so that changes in the styling could be made from within the site’s css file. I updated the hover effects and transitions, as well as the overall styling. 
+
+
+/* Custom button class for main site. */
+.btn-main {
+    display: inline-block;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    padding: .5rem .5rem;
+    font-family: Arial;
+    text-align: center;
+    text-decoration: none;
+    border-radius: .25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-color: var(--main-bg-color);
+    color: var(--light-color);
+    border: 1px solid var(--main-bg-color);
+    transition: .5s; /* gradual transition on hover on/off */
+}
+
+
+    .btn-main:focus, btn-main:active:hover { /* combined to reduce duplicate code */
+        text-decoration: none; /* remove underline on hover */
+        background-color: rgba(0, 0, 0, .6);
+        color: var(--main-bg-color);
+        border: 1px solid var(--main-bg-color);
+        box-shadow: none;        
+    }
+
+
+    .btn-main:hover, .btn-main:hover:not([diabled="disabled"]) {
+        /* background-color: rgba(219, 26, 17, .7); */
+        text-decoration: none; /* remove underline on hover */
+        background-color: var(--main-secondary-color);
+        color: var(--light-color);
+        border: 1px solid var(--main-bg-color);
+        opacity: .8;
+    }
+
+
+The button class needed to be changed on every page so I updated it on 51 different files. Several of the pages needed additional styling and adjustments, which I used Bootstrap classes to achieve. 
+
+
+Archive Page Styling
+In this story I was tasked with several changes to the Archive Page. First I needed to move the search bar, resize it, and change the color scheme. In order to achieve that I moved the entire code block into the correct position on the website. I edited the css file to change the size of the search bar, and updated the colors of the search bar and search results table to match the rest of the site.
+
+
+I also needed to fix the buttons on the page, aligning them with the rest of the website. I used the custom button class that I had updated in a previous story, and edited the css to fix an issue with disabled buttons reacting to mouse events. I created some space along the edges of the content by adding Bootstrap classes to each of the content sections. In order to make the Past Productions section more visible I updated the accordion buttons to the site’s custom button class, which changed the look of them completely while fitting the theme of the site. 
+
+
+Clickable Area Fix
+I was assigned the task of fixing it so the clickable area of a photo link was contained only within the Production Photo. There was a Bootstrap spacing class in the <img> tag that was making the clickable area larger than the photo, so I removed it. In order to maintain the distance between the header and content that had previously existed I placed the spacing class back into the <div> tag above it.
+
+
+Skills & Lessons Learned
+* Balancing troubleshooting on my own with being able to ask for help.
+* Utilizing the tools available in the best way.
+*
